@@ -18,7 +18,7 @@ module.exports = function(grunt, modifyConfig) {
 		config.watch.tmpl = { files: 'src/**/*.tmpl.html', tasks: [ 'build_tmpl' ] };
 		config.uglify.templates = { files: [ { expand: true, cwd: 'build', src: 'templates/**/*.js', dest: 'dist' } ] }
 		// Override karma configFile
-		config.karma.unit.configFile = '../gruntfile-convention-angular/karma.conf.js';
+		config.karma.unit.configFile = 'node_modules/gruntfile-convention-angular/karma.conf.js';
 	});
 
 	// Override build_js
