@@ -1,6 +1,6 @@
 {
   "name": "gruntfile-convention-angular",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Grunt convetions over configuration angular app",
   "files": [
     "gruntfile-convention-angular.js"
