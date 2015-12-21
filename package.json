@@ -1,9 +1,10 @@
 {
   "name": "gruntfile-convention-angular",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Grunt convetions over configuration angular app",
   "files": [
-    "gruntfile-convention-angular.js"
+    "gruntfile-convention-angular.js",
+    "karma.conf.js"
   ],
   "main": "./gruntfile-convention-angular.js",
   "scripts": {
@@ -20,7 +21,6 @@
     "grunt-html2js": "^0.3.5",
     "grunt-ng-annotate": "^1.0.1",
     "gruntfile-convention-webapp": "0.2.0",
-    "karma-html2js-preprocessor": "^0.1.0",
     "karma-ng-html2js-preprocessor": "^0.2.0"
   }
 }

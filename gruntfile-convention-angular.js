@@ -1,6 +1,6 @@
 module.exports = function(grunt, modifyConfig) {
 
-	require('gruntfile-convention-webapp/gruntfile-convention-webapp.js')(grunt, function extendConfig(config) {
+	require('gruntfile-convention-webapp')(grunt, function extendConfig(config) {
 		config.html2js = {
 			options: {
 				module: '<%= pkg.name %>-templates',
@@ -19,6 +19,11 @@ module.exports = function(grunt, modifyConfig) {
 		config.uglify.templates = { files: [ { expand: true, cwd: 'build', src: 'templates/**/*.js', dest: 'dist' } ] }
 		// Override karma configFile
 		config.karma.unit.configFile = 'node_modules/gruntfile-convention-angular/karma.conf.js';
+
+		if (modifyConfig) {
+			modifyConfig(config);
+		}
+
 	});
 
 	// Override build_js
