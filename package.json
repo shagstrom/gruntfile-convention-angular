@@ -1,6 +1,6 @@
 {
   "name": "gruntfile-convention-angular",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Grunt convetions over configuration angular app",
   "files": [
     "gruntfile-convention-angular.js",
@@ -18,7 +18,7 @@
   "author": "Simon Hagstrom",
   "license": "ISC",
   "dependencies": {
-    "gruntfile-convention-webapp": "0.3.0",
+    "gruntfile-convention-webapp": "0.4.0",
     "grunt-html2js": "^0.3.5",
     "grunt-ng-annotate": "^1.0.1",
     "karma-ng-html2js-preprocessor": "^0.2.0"
