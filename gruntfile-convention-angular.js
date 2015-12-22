@@ -8,7 +8,7 @@ module.exports = function(grunt, modifyConfig) {
 			},
 			build: {
 				src: [ 'src/**/*.tmpl.html' ],
-				dest: 'build/templates/templates.js'
+				dest: 'build/tmpl/templates.js'
 			}
 		};
 		config.ngAnnotate = {
@@ -16,7 +16,7 @@ module.exports = function(grunt, modifyConfig) {
 			build: { files: [ { expand: true, src: [ 'build/js/**/*.js' ] } ] }
 		};
 		config.watch.tmpl = { files: 'src/**/*.tmpl.html', tasks: [ 'build_tmpl' ] };
-		config.uglify.templates = { files: [ { expand: true, cwd: 'build', src: 'templates/**/*.js', dest: 'dist' } ] }
+		config.uglify.templates = { files: [ { expand: true, cwd: 'build', src: 'tmpl/**/*.js', dest: 'dist' } ] }
 		// Override karma configFile
 		config.karma.unit.configFile = 'node_modules/gruntfile-convention-angular/karma.conf.js';
 
@@ -31,9 +31,6 @@ module.exports = function(grunt, modifyConfig) {
 
 	// Add build_tmpl
 	grunt.task.registerTask('build_tmpl', [ 'html2js' ]);
-
-	// Override build
-	grunt.task.registerTask('build', [ 'clean', 'build_bower_dep', 'build_js', 'build_css', 'build_assets', 'build_tmpl', 'build_html', 'build_index' ]);
 
 	grunt.loadNpmTasks('grunt-html2js');
     grunt.loadNpmTasks("grunt-ng-annotate");
