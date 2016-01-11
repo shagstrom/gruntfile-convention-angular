@@ -4,7 +4,7 @@ module.exports = function(grunt, modifyConfig) {
 		config.html2js = {
 			options: {
 				module: '<%= pkg.name %>-templates',
-				htmlmin: { removeComments: true, collapseWhitespace: true }
+				htmlmin: { removeComments: true, collapseWhitespace: true, conservativeCollapse: true }
 			},
 			build: {
 				src: [ 'src/**/*.tmpl.html' ],
