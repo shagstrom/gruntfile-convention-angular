@@ -11,15 +11,14 @@ module.exports = function(config) {
 		options.ngHtml2JsPreprocessor = {
 			moduleName: function(htmlPath, originalPath) {
 				var relativePath = htmlPath.replace(process.cwd() + '/', '');
-				console.log(relativePath);
 				if (relativePath.startsWith('git_modules/')) {
 					var git_module = relativePath.split('/')[1];
-					return require(process.cwd() + '/git_modules/' + git_module + '/package.json').name + '-templates';	
+					return require(process.cwd() + '/git_modules/' + git_module + '/package.json').name + '-templates';
 				} else {
 					return require(process.cwd() + '/package.json').name + '-templates';
 				}
 			}
-		}
+		};
 	});
 
 };
